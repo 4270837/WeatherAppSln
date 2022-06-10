@@ -7,7 +7,9 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Monday" TextColor="Black" FontAttributes="Bold" FontSize="Large" />
+                       
             <Image Source="SunnyCloudy.jpg" HeightRequest="200" />
+            <Label Text="{Binding main.temp}"/>
             <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0">
 
                 <!--Creating column and rows-->
@@ -37,7 +39,8 @@
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.6">
                         <StackLayout>
                             <Label Text="Temp" FontSize="Body" TextColor="Black"/>
-
+                            <Image Source="Temperature.jpg" WidthRequest="10"/>
+                            <Label Text="19%"/>
                         </StackLayout>
                     </Grid>
 
@@ -45,7 +48,8 @@
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.5" Grid.Column="1">
                         <StackLayout>
                             <Label Text="Humidity" FontSize="Body" TextColor="Black"/>
-
+                            <Image Source="Humidity.jpg" WidthRequest="10"/>
+                            <Label Text="19%"/>
                         </StackLayout>
                     </Grid>
 
@@ -53,7 +57,8 @@
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.6" Grid.Column="2">
                         <StackLayout>
                             <Label Text="Pressure" FontSize="Body" TextColor="Black"/>
-
+                            <Image Source="Pressure.jpg" WidthRequest="10"/>
+                            <Label Text="19%"/>
                         </StackLayout>
                     </Grid>
 
@@ -61,6 +66,8 @@
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.5" Grid.Column="3">
                         <StackLayout>
                             <Label Text="Cloud Cover" FontSize="Body" TextColor="Black" />
+                            <Image Source="Cloudy.jpg" WidthRequest="10"/>
+                            <Label Text="19%"/>
                         </StackLayout>
                     </Grid>
 
@@ -68,6 +75,8 @@
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.6" Grid.Column="4">
                         <StackLayout>
                             <Label Text="Wind Speed" FontSize="Body" TextColor="Black"/>
+                            <Image Source="Wind.jpg" WidthRequest="10"/>
+                            <Label Text="19%"/>
                         </StackLayout>
                     </Grid>
 
