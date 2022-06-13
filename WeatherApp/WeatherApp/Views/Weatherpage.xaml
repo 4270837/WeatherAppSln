@@ -68,14 +68,14 @@
 
                     <!--Populating the grid at the bottom-->
                     <!--Column 0-->
-                    <Grid BackgroundColor="LavenderBlush" Opacity="0.6">
-                        <StackLayout>
+                    <Grid BackgroundColor="LavenderBlush" Opacity="0.6" >
+                        <StackLayout Spacing="30" >
                             <Label Text="Temp" FontSize="Body" TextColor="Black"/>
                             <StackLayout>
                                 <Image Source="Temperature.jpg" WidthRequest="30"/>
                                 <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
-                                    <Label Text="{Binding main.temp}"/>
-                                <Label Text="°"/>
+                                    <Label Text="{Binding main.temp}" FontSize="Body"/>
+                                    <Label Text="°" FontSize="Body"/>
                                  </StackLayout>
                             </StackLayout>
                                 
@@ -84,12 +84,12 @@
 
                     <!--Column 1-->
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.5" Grid.Column="1">
-                        <StackLayout>
+                        <StackLayout Spacing="30">
                             <Label Text="Humidity" FontSize="Body" TextColor="Black"/>
                             <StackLayout >
                             <Image Source="Humidity.jpg" WidthRequest="30"/>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                                    <Label Text="{Binding main.humidity}"/>
+                                    <Label Text="{Binding main.humidity}" FontSize="Body"/>
                                 </StackLayout>
                             </StackLayout>
                             </StackLayout>
@@ -97,12 +97,12 @@
 
                     <!--Column 2-->
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.6" Grid.Column="2">
-                        <StackLayout>
+                        <StackLayout Spacing="30">
                             <Label Text="Pressure" FontSize="Body" TextColor="Black"/>
                             <StackLayout>
                             <Image Source="Pressure.jpg" WidthRequest="30"/>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                                    <Label Text="{Binding main.pressure}"/>
+                                    <Label Text="{Binding main.pressure}" FontSize="Body"/>
                                 </StackLayout>
                             </StackLayout>
                         </StackLayout>
@@ -110,12 +110,12 @@
 
                     <!--Column 3-->
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.5" Grid.Column="3">
-                        <StackLayout>
+                        <StackLayout Spacing="10">
                             <Label Text="Cloud Cover" FontSize="Body" TextColor="Black" />
                         <StackLayout>
                         <Image Source="Cloudy.jpg" WidthRequest="30"/>
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                                    <Label Text="{Binding clouds.all}"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                                    <Label Text="{Binding clouds.all}" FontSize="Body"/>
                                 </StackLayout>
                             </StackLayout>
                         </StackLayout>
@@ -123,12 +123,12 @@
 
                     <!--Column 4-->
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.6" Grid.Column="4">
-                        <StackLayout>
+                        <StackLayout Spacing="10">
                             <Label Text="Wind Speed" FontSize="Body" TextColor="Black"/>
                         <StackLayout>
                         <Image Source="Wind.jpg" WidthRequest="30"/>
                                 <StackLayout HorizontalOptions="CenterAndExpand">
-                                    <Label Text="{Binding wind.speed}"/>
+                                    <Label Text="{Binding wind.speed}" FontSize="Body"/>
                                 </StackLayout>
                             
                             </StackLayout>
