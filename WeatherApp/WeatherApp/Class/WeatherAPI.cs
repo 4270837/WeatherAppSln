@@ -12,8 +12,8 @@ namespace WeatherApp
 
         public class Coord
         {
-            public int lon { get; set; }
-            public int lat { get; set; }
+            public double lon { get; set; }
+            public double lat { get; set; }
         }
 
         public class Main

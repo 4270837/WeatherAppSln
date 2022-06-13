@@ -6,12 +6,44 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Monday" TextColor="Black" FontAttributes="Bold" FontSize="Large" />
-                       
-            <Image Source="SunnyCloudy.jpg" HeightRequest="200" />
-            <Label Text="{Binding main.temp}"/>
-            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0">
+            <Label Text="Monday" Opacity="0.5" TextColor="Black" FontAttributes="Bold" FontSize="Large" />
+         <StackLayout>
+             
+         </StackLayout>
+            <Image Source="SunnyCloudy.jpg" HeightRequest="200" Opacity="0.5"/>
+            <!--<Label Text="{Binding main.temp}"/>-->
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand"  >
+                <Label Text="Cape Town" FontSize="Large" FontAttributes="Bold"  />
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding main.temp}" FontSize="Large" />
+                    <Label Text="°" FontSize="Large"/>
+                </StackLayout>
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="CenterAndExpand">
+                
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Label Text="Feels like: " FontSize="Large"/>
+                    <Label Text="{Binding main.feels_like}" FontSize="Large"/>
+                    <Label Text="°" FontSize="Large"/>
+                </StackLayout>
 
+                <StackLayout   Orientation="Horizontal" VerticalOptions="Center">
+                    <Label Text="Max: " FontSize="Large"/>
+                    <Label Text="{Binding main.temp_max}" FontSize="Large"/>
+                    <Label Text="°" FontSize="Large"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Label Text="Min:  " FontSize="Large"/>
+                    <Label Text="{Binding main.temp_min}" FontSize="Large"/>
+                    <Label Text="°" FontSize="Large"/>
+                </StackLayout>
+            
+            
+                </StackLayout>
+           
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0" ColumnSpacing="100">
                 <!--Creating column and rows-->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -22,7 +54,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <BoxView BackgroundColor="Maroon" Opacity="0.5"/>
+                  
                 </Grid>
                 <Grid Grid.Row="1" HeightRequest="160" ColumnSpacing="0" >
                     <Grid.ColumnDefinitions>
@@ -39,8 +71,14 @@
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.6">
                         <StackLayout>
                             <Label Text="Temp" FontSize="Body" TextColor="Black"/>
-                            <Image Source="Temperature.jpg" WidthRequest="10"/>
-                            <Label Text="19%"/>
+                            <StackLayout>
+                                <Image Source="Temperature.jpg" WidthRequest="30"/>
+                                <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
+                                    <Label Text="{Binding main.temp}"/>
+                                <Label Text="°"/>
+                                 </StackLayout>
+                            </StackLayout>
+                                
                         </StackLayout>
                     </Grid>
 
@@ -48,17 +86,25 @@
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.5" Grid.Column="1">
                         <StackLayout>
                             <Label Text="Humidity" FontSize="Body" TextColor="Black"/>
-                            <Image Source="Humidity.jpg" WidthRequest="10"/>
-                            <Label Text="19%"/>
-                        </StackLayout>
+                            <StackLayout >
+                            <Image Source="Humidity.jpg" WidthRequest="30"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Label Text="{Binding main.humidity}"/>
+                                </StackLayout>
+                            </StackLayout>
+                            </StackLayout>
                     </Grid>
 
                     <!--Column 2-->
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.6" Grid.Column="2">
                         <StackLayout>
                             <Label Text="Pressure" FontSize="Body" TextColor="Black"/>
-                            <Image Source="Pressure.jpg" WidthRequest="10"/>
-                            <Label Text="19%"/>
+                            <StackLayout>
+                            <Image Source="Pressure.jpg" WidthRequest="30"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Label Text="{Binding main.pressure}"/>
+                                </StackLayout>
+                            </StackLayout>
                         </StackLayout>
                     </Grid>
 
@@ -66,8 +112,12 @@
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.5" Grid.Column="3">
                         <StackLayout>
                             <Label Text="Cloud Cover" FontSize="Body" TextColor="Black" />
-                            <Image Source="Cloudy.jpg" WidthRequest="10"/>
-                            <Label Text="19%"/>
+                        <StackLayout>
+                        <Image Source="Cloudy.jpg" WidthRequest="30"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Label Text="{Binding clouds.all}"/>
+                                </StackLayout>
+                            </StackLayout>
                         </StackLayout>
                     </Grid>
 
@@ -75,8 +125,15 @@
                     <Grid BackgroundColor="LavenderBlush" Opacity="0.6" Grid.Column="4">
                         <StackLayout>
                             <Label Text="Wind Speed" FontSize="Body" TextColor="Black"/>
-                            <Image Source="Wind.jpg" WidthRequest="10"/>
-                            <Label Text="19%"/>
+                        <StackLayout>
+                        <Image Source="Wind.jpg" WidthRequest="30"/>
+                                <StackLayout HorizontalOptions="CenterAndExpand">
+                                    <Label Text="{Binding wind.speed}"/>
+                                    <Label Text="{Binding wind.deg}"/>
+                                    <Label Text="{Binding wind.gust}"/>
+                                </StackLayout>
+                            
+                            </StackLayout>
                         </StackLayout>
                     </Grid>
 
