@@ -129,8 +129,6 @@
                         <Image Source="Wind.jpg" WidthRequest="30"/>
                                 <StackLayout HorizontalOptions="CenterAndExpand">
                                     <Label Text="{Binding wind.speed}"/>
-                                    <Label Text="{Binding wind.deg}"/>
-                                    <Label Text="{Binding wind.gust}"/>
                                 </StackLayout>
                             
                             </StackLayout>
